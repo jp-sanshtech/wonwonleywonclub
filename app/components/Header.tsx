@@ -7,8 +7,11 @@ export default function Header() {
       <Image
         src="/images/WONWONLEYWON LOGO club PNG.png"
         alt="WONWONLEYWON LOGO"
-        width={225}
+        width={140}
         height={55}
+        style={{
+          marginLeft: "9px",
+        }}
         priority
         // className="logo-image"
         loading="eager"
