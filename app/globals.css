@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --font-sans: var(--font-encode-sans-condensed);
+  --header-height: 7.7%;
+  --content-height: 92.3%;
+  --line-height: 7.7%;
+  --padding-left: 1rem;
+  --padding-right: 1rem;
+  --border-width: 1px;
+  --font-size: 19px;
+  --line-height-text: 28px;
+}
+
+/* Reset and base styles with performance optimizations */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed; /* Optimize text rendering */
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height-text);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  will-change: auto; /* Optimize rendering performance */
+}
+
+/* Layout structure */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+  box-sizing: border-box;
+  height: 7.7%;
+  min-height: 7.7%;
+  max-height: 7.7%;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border-width) solid var(--foreground);
+  padding: 0 var(--padding-left);
+}
+
+.logo-text {
+  font-size: var(--font-size);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: var(--line-height-text);
+}
+/* Navigation styles */
+.nav-container {
+  height: var(--content-height);
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--foreground);
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border-width) solid var(--foreground);
+  padding: 0 var(--padding-left);
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: var(--line-height-text);
+  height: var(--line-height);
+  min-height: var(--line-height);
+  max-height: var(--line-height);
+}
+
+.text-container {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--foreground);
+  width: 100vw;
+  max-width: 100%;
+  padding: 1.5rem var(--padding-left);
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: var(--line-height-text);
+}
+
+/* Line styles */
+.bottomLine, .empty-line {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  height: var(--line-height);
+  min-height: var(--line-height);
+  max-height: var(--line-height);
+  border-bottom: var(--border-width) solid var(--foreground);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--padding-left);
+}
+
+.topLine {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  height: var(--line-height);
+  min-height: var(--line-height);
+  max-height: var(--line-height);
+  border-top: var(--border-width) solid var(--foreground);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--padding-left);
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  padding: 0.5rem var(--padding-left);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: var(--line-height-text);
+  color: var(--foreground);
+}
+
+/* Responsive design - maintain exact same aesthetic */
+@media (max-width: 1025px) {
+  :root {
+    --font-size: 19px; /* Maintain the same font size across all devices */
+  }
+}
